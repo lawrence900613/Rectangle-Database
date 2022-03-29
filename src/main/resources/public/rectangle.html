@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="stylesheets/calculator.css" rel="stylesheet">
+  <title>Rectangle</title>
+  <script src = "./calculator.js" defer ></script>
+</head>
+<body>
+  <main>
+    <div class = "box1">
+      <div class = "box">
+      <header>Rectangle</header><a href="/Database" class = "main1">Main</a><a href="/rectangle" class = "new1">Add Rectangle</a>
+      <div class = "box2" style="background-color: #e9eff1">
+      <h2>Insert New Rectangle</h2>
+      
+      <form action="#" method="post" th:action="@{/rectangle}" th:object="${rectangle}">
+        <input type="text" th:field=*{name} placeholder="name"> 
+        <input type="text" th:field=*{color} placeholder="color"> 
+        <input type="number" th:field=*{height} placeholder="height"> 
+        <input type="number" th:field=*{width} placeholder="width"> 
+        <input type="submit" value="Submit Rectangle">
+    </form>
+
+    </div>
+    
+  </div>
+  </div>
+  </main>
+
+
+
+</body>
+</html>
+
+
+

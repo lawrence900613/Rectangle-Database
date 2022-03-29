@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../stylesheets/calculator.css" />
+  <title>Rectangle</title>
+</head>
+
+<body>
+  <main>
+    <div class="box">
+      <header>Rectangle DataBase</header><a href="/Database" class="main1">Main</a><a href="/rectangle" class="new1">Add
+        Rectangle</a>
+      <div class="box2" style="background-color: #e9eff1">
+        <table id="myTable" class="myTable">
+          <tr>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Width</th>
+            <th>Height</th>
+            <th>Delete</th>
+          </tr>
+          <tr th:each="record : ${records}">
+            <td><a th:href="@{/RectangleInfo/{id}(id=${record.getID()})}" th:text="${record.getName()}"></a></td>
+            <td th:style= "'background-color:'+@{${record.getColor()}}"></td>
+            <td th:text="${record.getHeight()}"></td>
+            <td th:text="${record.getWidth()}"></td>
+            <form th:action="@{/RectangleInfo2/{id}(id=${record.getID()})}" method="post">
+              <td><input type="submit" class="botton" value="DELETE"></td>
+            </form>
+          </tr>
+        </table>
+
+
+      </div>
+
+    </div>
+  </main>
+
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../stylesheets/RectangleInfo.css" / >
+  <script src = "../stylesheets/calculator.js" defer ></script>
+  <title>Rectangle</title>
+</head>
+<body>
+  <main>
+    <div class = "box1">
+      <div class = "box">
+      <header>RectangleInformation</header>
+      <div class = "box2" style="background-color: #e9eff1">
+        <h2>Profile</h2>
+        <div id="colorprofile" class="colorprofile">
+      </div>
+      <div class ="message">
+        <p>The diplay image only give an overview of the picture but not the exactly size</p>
+      </div>
+        <table id="myTable" th:each="record:${records}"> 
+      <tr>
+        <th>Name</th><td id="name" th:text="${record.getName()}"></td>
+      </tr>
+      <tr>
+        <th>Color</th><td id="color" th:text="${record.getColor()}"></td>
+      </tr>
+      <tr>
+        <th>Height</th><td id="height" th:text="${record.getHeight()}"></td>
+      </tr>
+      <tr>
+        <th >Width</th><td id="width" th:text="${record.getWidth()}"></td>
+      </tr>
+      <tr>
+        <th >Area</th><td id="area"></td>
+      </tr>
+    </table>
+    <input type="button" class="botton" value="Back" onclick="location.href='/Database'">
+  </div>
+</div>
+</div>
+
+
+
+</main>
+
+
+</body>
+</html>

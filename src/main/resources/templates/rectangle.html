@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../stylesheets/calculator2.css" / >
+  <title>Rectangle</title>
+</head>
+<body>
+  <main>
+    <div class = "box1">
+      <div class = "box">
+      <header>Rectangle</header><a href="/Database" class = "main1">Main</a><a href="/rectangle" class = "new1">Add Rectangle</a>
+      <div class = "box2" style="background-color: #e9eff1">
+      <h2>Insert New Rectangle</h2>
+      
+      <table class="myTable" id="Table">
+        <thead>
+            <tr class="RowOne">
+                <th>Name</th>
+                <th>Color</th>
+                <th>Height</th>
+                <th>Width</th>
+                <th>Submit</th>
+            </tr>
+        </thead>
+      <form action="#" method="post" th:action="@{/rectangle}" th:object="${rectangle}">
+        <tbody>
+          <tr>
+            <td><input type="text" th:field=*{name} placeholder="name"></td> 
+            <td><input type="color" class="Textbox"  th:field=*{color}></td> 
+            <td><input type="number" step="any" th:field=*{height} min="0" placeholder="height"></td> 
+            <td><input type="number" step="any" th:field=*{width} min="0" placeholder="width"></td> 
+            <td><input type="submit" class="botton" value="Submit Rectangle"></td>
+          </tr>
+        </tbody>
+    </form>
+    </div>
+    
+  </div>
+  </div>
+  </main>
+
+
+
+</body>
+</html>
+
+
